@@ -1,0 +1,8 @@
+Navigate to the EC2 service dashboard
+Click on "EC2 Dashboard" on the left-hand nav
+On the far right, under Account Attributes, select Zones
+Local Zones are listed first (these will be described later)
+Scroll to the bottom to see the standard Availability Zones
+Look at the names to see the Zone IDs vs Logical names
+Switch regions to see the Zone IDs in each
+Some region Zone IDs may match the actual AZ, others will not

@@ -1,0 +1,7 @@
+Log into the AWS Console using the root account credentials
+Click on Account and show where to enable IAM user/role access to billing information
+Click on Free Tier to view usage rate against Free Tier service offerings
+Click on Security Credentials
+Show where Access Keys could be configured, and make sure there are none
+Click on bottom left Feedback and show how suggestions/issues can be reported
+Click on Services and show how to drill down into service groups

@@ -1,0 +1,9 @@
+Navigate to the EC2 service dashboard
+Click on "EC2 Dashboard" on the left-hand nav
+On the far right, under Account Attributes, select Zones
+If the region selected has no Local Zones, select another region until you see one (or more)
+In us-east-1, Local Zones include Atlanta, Boston and Chicago (as examples)
+Click on "Manage" next to one of the Local Zones
+Change the radio button from "Disabled" to "Enabled"
+Click on "Update Zone Group" to opt into the Local Zone
+This Local Zone is now available for subnet creation when working with VPCs
