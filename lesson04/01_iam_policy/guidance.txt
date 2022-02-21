@@ -1,0 +1,27 @@
+Navigate to the IAM service dashboard and select "Policies" on the left-hand nav
+Show filtering by type, and explain the "AWS Managed - Job Function" policies
+Type "password" in the search bar followed by the return key, to see IAMUserChangePassword
+Click the radio button next to the policy, then click "Actions" and "Attach"
+Click the checkbox next to the newly created group and click "Attach Policy"
+This allows any users within the group to change their own password
+
+(We will use S3 read only access to a single bucket as an example for policy creation)
+Click on Create Policy
+Select "Choose a service" and type S3 in the search bar and click in S3 in the results
+Click the arrow next to "List" and select "ListBucket"
+This permission will allow you to view the list of objects in the bucket
+Click the arrow next to "Read" and see the large list of permissions
+Out of this large list, only "GetObject" needs to be selected to provide object download access
+Scroll down and hover over Resources until it turns blue, then click
+Next to "bucket" click on "Add ARN to restrict access"
+Type "mytestbucket" in the Bucket name field and watch as it populates the ARN above
+Click Add
+Next to "object" click on "Add ARN to restrict access"
+Type "mytestbucket" in the Bucket name field
+Next to the Object name field, click on the "Any" checkbox and view the ARN above
+Click Add
+Click "Next:Tags"
+Add tags as desired
+Click "Next:Review"
+Name your policy, add an optional description, and click "Create Policy"
+The policy is a customer-managed policy and can be associated with users, groups or roles

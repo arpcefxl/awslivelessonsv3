@@ -5,3 +5,7 @@ You can choose to add existing users to the group now or later
 Scroll down further and view the existing policies which can be attached to the group
 Only Managed policies can be attached at group creation
 Inline policies must be added after creation (we will discuss these in the next lesson)
+Click "Create Group"
+In the group list, click on the newly created group name
+Near the bottom right, click on "Add users"
+Select the checkbox next to the newly created user and click "Add users"
