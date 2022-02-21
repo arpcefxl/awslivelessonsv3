@@ -1,0 +1,13 @@
+Click on the top left AWS icon in the AWS console
+To the right of the search bar is a small icon labeled "CloudShell"
+Click CloudShell and accept the initial notice if you're executing for the first time
+This tool is a way for you to avoid install/configure tasks for the AWS CLI
+Execute the following command in the CloudShell tool:
+aws sts get-session-token --duration-seconds 900
+The command response will be a JSON object with temporary credentials
+The permissions will be the same as your IAM user, with the expiration in the seconds specified
+You could use these credentials in the AWS CLI or SDK in an application
+If you receive the following error:
+An error occurred (AccessDenied) when calling the GetSessionToken operation: Cannot call GetSessionToken with session credentials
+This means you are logged into the AWS console using temporary credentials already
+This could be specifically an IAM Role or possibly federated identity
