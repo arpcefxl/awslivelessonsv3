@@ -1,0 +1,7 @@
+Navigate to the IAM service dashboard and select "User Groups" on the left-hand nav
+Click "Create Group"
+Enter a group name
+You can choose to add existing users to the group now or later
+Scroll down further and view the existing policies which can be attached to the group
+Only Managed policies can be attached at group creation
+Inline policies must be added after creation (we will discuss these in the next lesson)

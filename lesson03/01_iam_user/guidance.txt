@@ -1,0 +1,19 @@
+While logged in using the Root account credentials:
+Click on Account and show where to enable IAM user/role access to billing information
+Click on Security Credentials
+Show where Root Access Keys might be configured, and make sure there are none
+Navigate to the IAM service dashboard and select "Users" on the left-hand nav
+Click on "Add Users"
+Type in a user name
+You must pick either or both of the Access Key or Password for credentials
+If you select Password, you have other options for autogenerating the password
+If you select "Require Password Reset", you must make sure the user has permission to do that
+Click "Next:Permissions"
+You now have options for permissions, which will be discussed in the next Lesson
+Permissions can be left blank to be added later if desired
+Copying permissions from an existing user is a convenient way to duplicate permissions
+Click "Next:Tags"
+You may now add up to 50 key/value pairs that act as metadata
+These tags can be used for filtering/sorting, and permissions support them
+Click "Next:Review"
+Ensure all values are correct and click "Create User"
