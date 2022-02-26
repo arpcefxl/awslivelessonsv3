@@ -1,0 +1,30 @@
+Create VPC
+
+Navigate to the VPC service dashboard and click "Your VPCs" on the left hand nav
+Click "Create VPC" on the top right
+Name Tag : demo-vpc
+IPv4 CIDR: 10.100.0.0/16
+Click "Create VPC"
+In the "Your VPCs" dashboard, click the checkbox next to "demo-vpc"
+On the right, select the Actions drop-down and click "Edit DNS hostnames"
+Click the Enable checkbox and "Save Changes"
+
+Create 3 subnets
+Select Subnets on the left hand nav
+Click "Create Subnet" on the top right
+Select the demo-vpc ID
+Subnet name: public
+AZ: no preference
+CIDR block: 10.100.1.0/24
+Click "Add new subnet"
+
+Name: private
+AZ: no preference
+CIDR: 10.100.2.0/24
+Click "Add new subnet"
+
+Name: database
+AZ: no preference
+CIDR: 10.100.3.0/24
+
+Click "Create Subnet"

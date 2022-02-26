@@ -1,0 +1,25 @@
+Navigate to the IAM service dashboard and select "Roles" on the left-hand nav
+
+Search for the role "s3-bucket-create-test-role" created in the previous demo
+Click on the role and copy the ARN
+
+Select "Policies" on the left-hand nav
+assume-role-test-policy
+
+Click on Create Policy
+Select the JSON tab and paste the contents of the create_bucket_policy.json file
+Replace the ARN of the role with the copied role ARN from earlier or leave as is
+Click "Next:Tags"
+Add tags as desired
+Click "Next:Review"
+Name your policy "assume-role-test-policy" and click "Create Policy"
+
+Attach the policy to any IAM user for which you have configured the CLI
+Edit your local file ~/.aws/config and add the following:
+[profile assume-role-test]
+role_arn = YOUR_ROLE_ARN
+source_profile = default
+
+Write and close the file
+Using the cli, you can try the following:
+aws --profile assume-role-test s3api create-bucket --bucket BUCKETNAME --region REGION

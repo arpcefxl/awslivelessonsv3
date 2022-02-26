@@ -1,0 +1,39 @@
+Navigate to the VPC service dashboard and click "Network ACLs" on the left hand nav
+
+Click "Create Network ACL"
+Name: "demo-vpc"
+VPC: select demo-vpc
+Click "Create Network ACL"
+
+Click on the new Network ACL name
+Select the "Inbound rules" tab, and "Edit inbound rules"
+"Add new rule"
+Rule number: 10
+Type: All traffic
+Source: 10.100.1.0/24 (the public subnet)
+Allow/Deny: Deny
+
+"Add new rule"
+Rule number: 20
+Type: All traffic
+Source 10.100.0.0/16 (the vpc CIDR)
+Allow/Deny: Allow
+Save Changes
+
+Click on "Subnet associations" tab
+Click "Edit subnet associations"
+Select the checkbox next to the "database" subnet
+Click "Save changes"
+
+Click on "Security Groups" on the left hand nav
+Click "Create security group"
+Security group name: "inbound-web"
+Security group description: "Inbound web traffic"
+VPC: click and select demo-vpc
+Under Inbound rules, click Add rule
+Type: HTTP
+Source: 0.0.0.0/0
+Under click Add rule
+Type: HTTPS
+Source: 0.0.0.0/0
+Click "Create security group"

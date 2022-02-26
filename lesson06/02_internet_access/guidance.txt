@@ -1,0 +1,41 @@
+Navigate to the VPC service dashboard and click "Internet Gateways" on the left hand nav
+
+Click "Create Internet Gateway" on the top right
+Name tag: demo-vpc
+Click "Create Internet Gateway"
+On the following page, the top bar will now have a link to "Attach to a VPC" - Click that
+Click in the search box, and look for "demo-vpc", select it
+Click "Attach Internet Gateway"
+
+Click "Route Tables" on the left hand nav
+Click "Create route table"
+Name: "demo-vpc-public"
+VPC: select "demo-vpc"
+Click "Create route table"
+On the Routes tab below, click on "Edit routes"
+Add route
+Destination: 0.0.0.0/0
+Target: click and select "Internet Gateway" then select the correct entry
+Click on the Subnet Associations tab, then click "Edit subnet associations"
+Select the checkbox next to the "public" subnet, then click "Save Associations"
+
+#WARNING: The rest of this demo costs $, due to the NAT Gateway!
+Click "NAT Gateways" on the left hand nav
+Click "Create NAT Gateway"
+Name: demo-vpc
+Subnet: Select the subnet "public"
+Connectivity type: Public
+Click "Allocate Elastic IP"
+Click "Create NAT Gateway"
+
+Click "Route Tables" on the left hand nav
+Click "Create route table"
+Name: "demo-vpc-private"
+VPC: select "demo-vpc"
+Click "Create route table"
+On the Routes tab below, click on "Edit routes"
+Add route
+Destination: 0.0.0.0/0
+Target: click and select "NAT Gateway" then select the correct entry
+Click on the Subnet Associations tab, then click "Edit subnet associations"
+Select the checkbox next to the "private" subnet, then click "Save Associations"

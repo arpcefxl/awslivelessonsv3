@@ -1,0 +1,21 @@
+Create a policy to allow S3 Create Bucket permissions
+
+Navigate to the IAM service dashboard and select "Policies" on the left-hand nav
+Click on Create Policy
+Select the JSON tab and paste the contents of the create_bucket_policy.json file
+Click "Next:Tags"
+Add tags as desired
+Click "Next:Review"
+Name your policy s3-create-bucket and click "Create Policy"
+
+Create a same-account IAM Role with the new policy
+
+Click on Roles on the left-hand nav in the IAM service dashboard
+Click "Create Role"
+Select the radio button next to "AWS Account"
+Leave the radio button next to "This account" selected
+Click Next
+In the search bar, enter "s3-create-bucket"
+Select the checkbox next to the correct policy and click Next
+Name the new role "s3-create-bucket-role"
+Scroll down to the bottom and click "Create Role"

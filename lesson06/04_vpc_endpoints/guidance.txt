@@ -1,0 +1,10 @@
+Navigate to the VPC service dashboard and click "Endpoints" on the left hand nav
+
+Click on "Create endpoint"
+Name: demo-vpc-endpoint
+In the Services search box, type s3 and hit return
+Select the radio button next to com.amazonaws.REGION.s3 that has a type "Gateway"
+In the VPC drop-down, select demo-vpc
+Under Route tables, select the checkbox next to the private route table
+In Policy, leave Full access checked
+Click "Create endpoint"
