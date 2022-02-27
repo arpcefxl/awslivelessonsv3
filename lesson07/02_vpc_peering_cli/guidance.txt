@@ -1,0 +1,22 @@
+Deploy the demo vpc resources using Terraform. Install with the following URL
+https://learn.hashicorp.com/tutorials/terraform/install-cli
+
+Configure the AWS CLI with appropriate permissions for the VPC service
+The demo uses the [default] AWS CLI profile
+
+Use the same demo Terraform resources as Lesson 7, demo 01
+terraform init
+terraform plan
+terraform apply
+
+aws ec2 create-vpc-peering-connection --vpc-id VPC_ID_OF_vpc-requestor --peer-vpc-id VPC_ID_OF_vpc-accepter --region us-east-1
+
+Navigate to the VPC dashboard and click on "Peering connections" on the left hand nav
+There will be a connection with a state of "Pending acceptance"
+Select the radio button next to it and in the details tab, copy the Peering connection ID
+
+aws ec2 accept-vpc-peering-connection --vpc-peering-connection-id PEERING_CONNECTION_ID_COPIED_ABOVE --region us-east-1
+
+aws ec2 create-route --route-table-id ROUTE_TABLE_ID_FOR_vpc-requestor-private --destination-cidr-block 10.1.0.0/16 --vpc-peering-connection-id PEERING_CONNECTION_ID_COPIED_ABOVE
+
+aws ec2 create-route --route-table-id ROUTE_TABLE_ID_FOR_vpc-accepter-private --destination-cidr-block 10.0.0.0/16 --vpc-peering-connection-id PEERING_CONNECTION_ID_COPIED_ABOVE

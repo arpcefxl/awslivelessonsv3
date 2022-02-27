@@ -1,0 +1,34 @@
+Deploy the demo vpc resources using Terraform using the following url:
+https://learn.hashicorp.com/tutorials/terraform/install-cli
+
+Configure the AWS CLI with appropriate permissions for the VPC service
+The demo uses the [default] AWS CLI profile
+
+To deploy the demo resources:
+terraform init
+terraform plan
+terraform apply
+
+Navigate to the VPC service dashboard and click "Peering Connections" on the left hand nav
+Click "Create peering connection"
+Name: demo-peering-console
+Requestor VPC: vpc-requestor
+Peering VPC: My account
+Region: This region
+Accepter VPC: vpc-accepter
+Click "Create peering connection"
+On the following page, Click on the Actions drop-down and select Accept request
+Click "Accept request"
+
+Click "Route Tables" on the left hand nav
+Click the checkbox next to "vpc-requestor-private-subnet" and select the Routes tab
+Click Edit routes, then Add route
+Destination: 10.1.0.0/16
+Target: Peering connection -> demo-peering-console
+Click Save changes
+
+Click the checkbox next to "vpc-accepter-private-subnet" and select the Routes tab
+Click Edit routes, then Add route
+Destination: 10.0.0.0/16
+Target: Peering connection -> demo-peering-console
+Click Save changes
