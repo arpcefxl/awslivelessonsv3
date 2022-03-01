@@ -1,0 +1,3 @@
+Find the latest Amazon Linux 2 AMI for the region as follows:
+aws ssm get-parameters --names /aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2 --query 'Parameters[0].[Value]' --output text --region REGION
+aws ec2 run-instances --image-id OUTPUT_FROM_ABOVE_COMMAND --region REGION 

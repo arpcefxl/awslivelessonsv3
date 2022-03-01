@@ -1,0 +1,3 @@
+Walk through an EC2 instance launch for Amazon Linux 2,
+t3.micro, newly uploaded key pair, demo vpc, and
+create a security group allowing inbound ssh from the local IP

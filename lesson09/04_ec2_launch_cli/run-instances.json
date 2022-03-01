@@ -1,0 +1,15 @@
+{
+    "ImageId": "AMIID", 
+    "InstanceType": "INSTANCETYPE", 
+    "KeyName": "KEYNAME",
+    "MaxCount": 1,
+    "MinCount": 1,
+    "Placement": {
+        "AvailabilityZone": "AZ"
+    },
+    "SecurityGroupIds": [
+        "SGID"
+    ],
+    "SubnetId": "SUBNETID",
+    "InstanceInitiatedShutdownBehavior": "terminate"
+}

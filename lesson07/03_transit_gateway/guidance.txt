@@ -1,0 +1,17 @@
+Navigate to the VPC service dashboard and click "Transit Gateways" on the left hand nav
+
+Click "Create transit gateway"
+Name: demo-tgw-console
+Accept all other defaults
+Click "Create transit gateway"
+
+(wait a few minutes for the transit gateway to be provisioned)
+
+Click on "Transit Gateway Attachments" on the left hand nav
+Click "Create transit gateway attachment"
+Name tag: tgw-demo-vpc-attachment
+Transit gateway ID: tgw-demo-vpc
+Attachment type: VPC
+VPC ID: demo-vpc
+Subnet IDs: <there should be only one choice>
+Click "Create transit gateway attachment"

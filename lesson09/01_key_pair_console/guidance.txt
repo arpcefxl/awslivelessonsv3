@@ -1,0 +1,5 @@
+Navigate to the EC2 service dashboard and click "Key Pairs" on the left hand nav
+Click "Create key pair"
+Name "demo-key-pair"
+Click "Create key pair"
+(the .pem key is downloaded via the browser)

@@ -1,0 +1,45 @@
+Navigate to the Route 53 service dashboard and click "Health checks" on the left hand nav
+
+Click "Create health check"
+Name: aws-health-check
+Specify endpoint by: Domain name
+Protocol: HTTPS
+Domain name: aws.amazon.com
+Port 443
+Click Next
+Create alarm: No
+Click "Create health check"
+
+Click "Hosted zones" on the left hand nav
+
+Click "Create hosted zone"
+Domain name: testdomain
+Type: Private hosted zone
+VPCs to associate with the hosted zone:
+  Region: us-east-1
+  VPC ID: demo-vpc
+Click "Create hosted zone"
+
+Allocate two new elastic IPs using the script:
+./create_eips.sh us-east-1 us-east-2
+You now have two static IP addresses to use for primary and failover DNS
+
+(back to the AWS Console)
+Click "Create record"
+Record name: www
+Record type: A
+Value: (the us-east-1 EIP)
+Routing policy: Failover
+Failover record type: Primary
+Health check: https://aws.amazon.com
+Record ID: us-east-1
+
+Click "add another record"
+Record name: www
+Record type: A
+Value: (the us-east-2 EIP)
+Routing policy: Failover
+Failover record type: Secondary
+Health check: https://aws.amazon.com
+Record ID: us-east-2
+

@@ -1,0 +1,8 @@
+Create the health check, hosted zone, and EIPs from the previous demonstration
+
+Get the Health Check ID:
+aws route53 list-health-checks --query HealthChecks[].[Id,HealthCheckConfig.FullyQualifiedDomainName] --output text |grep aws.amazon.com |cut -f1
+
+aws route53 change-resource-record-sets --hosted-zone-id HOSTED_ZONE_ID --change-batch file://failover_primary.json
+
+aws route53 change-resource-record-sets --hosted-zone-id HOSTED_ZONE_ID --change-batch file://failover_secondary.json

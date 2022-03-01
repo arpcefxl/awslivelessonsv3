@@ -1,0 +1,22 @@
+{
+            "Comment": "optional comment about the changes in this change batch request",
+            "Changes": [
+              {
+                "Action": "CREATE",
+                "ResourceRecordSet": {
+                  "Name": "www.testzone",
+                  "Type": "A",
+                  "SetIdentifier": "us-east-2",
+                  "Failover": "SECONDARY",
+                  "TTL": 60,
+                  "ResourceRecords": [
+                    {
+                      "Value": "US_EAST_2_EIP"
+                    },
+                    {...}
+                  ],
+                  "HealthCheckId": "HEALTH_CHECK_ID"
+                }
+              }
+            ]
+          }
