@@ -1,0 +1,13 @@
+Launch an EC2 instance into the same VPC and security group as the EFS file system
+Modify the security group to allow all inbound from self if the rule doesn't exist
+(assuming amazon linux or redhat)
+sudo yum install amazon-efs-utils
+
+Navigate to the EFS service dashboard and click "File systems" on the left hand nav
+Click on the demo-efs name link
+Click "Attach"
+Copy the command under "Using the EFS mount helper"
+
+Switch back to the EC2 terminal and issue the following:
+mkdir /efs
+Paste the command copied earlier and add a "/" before efs

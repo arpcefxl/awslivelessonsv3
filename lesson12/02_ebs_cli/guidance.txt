@@ -1,0 +1,24 @@
+Launch an Amazon Linux 2 EC2 instance into your region of choice
+Enable SSH capability or add an IAM role supporting SSM
+
+Create an EBS volume using the following command
+Change REGION and AZ to match the above EC2 instance
+aws ec2 create-volume --region REGION --availability-zone AZ --volume-type gp2 --size 20 --output text --query VolumeId
+
+Attach the EBS volume to the EC2 instance on device ID sdh
+Change REGION, VOLUMEID and INSTANCEID to match
+aws ec2 attach-volume --region REGION --volume-id VOLUMEID --instance-id INSTANCEID --device /dev/sdh
+
+Connect to the EC2 instance in a terminal with sudo privileges
+Execute the following commands in the terminal to format and mount the volume
+sudo -s
+mkfs.xfs /dev/nvme1n1
+mkdir /mount
+mount /dev/nvme1n1 /mount
+
+Switch back to the AWS CLI and issue the following command
+aws ec2 modify-volume --region REGION --volume-id VOLUMEID --size NEWSIZE
+
+Switch back to the EC2 instance terminal and issue the following:
+dmesg (test to see the volume size increase)
+xfs_growfs /dev/nvme1n1

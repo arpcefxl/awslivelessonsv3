@@ -1,0 +1,13 @@
+Navigate to the EFS service dashboard and click "Create file system"
+
+Name: demo-efs
+VPC: default
+Availability and durability: Regional
+Click "customize"
+File system settings: (accept defaults)
+Click Next
+Network access: (accept defaults)
+Click Next
+File system policy: (accept defaults)
+Click Next
+Click Create

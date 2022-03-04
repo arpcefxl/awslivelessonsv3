@@ -1,0 +1,34 @@
+Navigate to the EC2 service dashboard and click "Elastic Block Store->Volumes" on the left hand nav
+Click "Create Volume"
+Volume type: General purpose SSD (gp2)
+Size: 20Gb
+Availability zone: (accept the default)
+Snapshot ID: (accept the default)
+Tags:
+  Key: Name
+  Value: demo-volumetype
+Click "Create Volume"
+
+Select the checkbox next to the newly created volume, then "Actions->Modify volume"
+Volume type: Provisioned IOPS SSD (io2)
+Size: (accept the default)
+IOPS: 100
+Click "Modify"
+Discussion on how modifications have to be done 6 hours apart, so we create a new volume for the second operation
+
+Click "Create Volume"
+Volume type: General purpose SSD (gp2)
+Size: 20Gb
+Availability zone: (accept the default)
+Snapshot ID: (accept the default)
+Tags:
+  Key: Name
+  Value: demo-volumesize
+Click "Create Volume"
+
+Select the checkbox next to the newly created volume, then "Actions->Modify volume"
+Volume type: (accept the default)
+Size: 40Gb
+Click "Modify"
+
+Discussion on how EC2 can see the volume increase but no guarantee to extend FS
