@@ -1,0 +1,7 @@
+Navigate to the ECS service dashboard and click "Amazon ECR" on the left hand nav
+Click "Get Started"
+Visibility: Private
+Repository name:demo-repo
+Tag immutability: disabled
+Scan on push: disabled
+Encryption: enabled

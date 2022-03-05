@@ -1,0 +1,6 @@
+Instance location: accept default
+Platform: Linux/Unix
+Blueprint: LAMP
+Plan: pick the cheapest supported by the free trial
+Name your instance
+Click on "Create Instance"

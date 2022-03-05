@@ -1,0 +1,11 @@
+Navigate to the S3 service dashboard and click "Create bucket" 
+
+Explain each section of the bucket creation:
+Name
+Region
+Object Ownership
+Block Public Access settings
+Bucket versioning
+Tags
+Default encryption
+Advanced settings -> Object lock

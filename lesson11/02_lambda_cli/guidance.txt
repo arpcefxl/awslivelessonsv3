@@ -1,0 +1,16 @@
+A Lambda function requires an execution role for appropriate permissions
+It also requires the function configuration and the actual code
+
+Create the execution role as follows:
+aws iam create-role --role-name demo-lambda-permissions --assume-role-policy-document '{"Version": "2012-10-17","Statement": [{ "Effect": "Allow", "Principal": {"Service": "lambda.amazonaws.com"}, "Action": "sts:AssumeRole"}]}'
+
+Attach a permission policy to the role with the following command:
+aws iam attach-role-policy --role-name demo-lambda-permissions --policy-arn arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+
+Zip the JavaScript function code:
+zip function.zip index.js
+
+Create the Lambda function:
+aws lambda create-function --function-name demo-function \
+--zip-file fileb://function.zip --handler index.handler --runtime nodejs14.x \
+--role arn:aws:iam::<12_DIGIT_ACCT_ID>:role/demo-lambda-permissions

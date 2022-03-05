@@ -1,0 +1,10 @@
+Talk about how some buckets will require --region based on the region
+
+Copy a file to a bucket
+aws s3 cp LOCALFILE s3://BUCKET
+
+Copy a directory structure recursively to a bucket
+aws s3 cp ./directory s3://BUCKET --recursive
+
+Copy files from one bucket to another
+aws s3 cp s3://BUCKET1/OBJECT s3://BUCKET2/

@@ -1,0 +1,10 @@
+Block public access
+Explain each boolean variable and why you would use each
+
+Bucket policy
+Reminder that this is a resource-based policy
+Create a policy for public access
+
+Access control list
+Explain some of the different ACLs
+Discuss how CloudFront and S3 access logs require ACLs

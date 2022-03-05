@@ -1,0 +1,11 @@
+Navigate to the EC2 service dashboard and click "Instances" on the left hand nav
+For this demo we use the instance launched in the previous demo
+Select the checkbox next to the running EC2 instance
+Click on the Instance-state drop down and select Stop Instance
+Click Stop
+Wait until the instance state shows as Stopped
+You can refresh the display as needed
+Click the Actions drop-down, then Instance Settings->"Change instance type"
+Click the "Instance type" drop down and select t3.micro
+Click Apply
+Click on the Instance-state drop down and select Start Instance

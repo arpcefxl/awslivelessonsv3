@@ -1,0 +1,6 @@
+Navigate to the S3 service dashboard 
+Select the name link for the bucket to be modified
+Click on the "Permissions" tab
+
+Create a lifecycle rule for current object versions
+Create a lifecycle rule for noncurrent object versions

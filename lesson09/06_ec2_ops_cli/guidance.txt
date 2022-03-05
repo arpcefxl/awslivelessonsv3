@@ -1,0 +1,17 @@
+Create an IAM role for EC2 using the AmazonSSMManagedInstanceCore policy
+View the instance launched in demo 03 of this lesson in the AWS Console
+Attach the IAM role to the instance
+Verify the Availability Zone - it will be required to create an EBS volume in the same AZ
+Issue the following command using the CLI:
+aws ec2 create-volume --availability-zone AZ_FROM_ABOVE --volume-type gp2 --size 20 --query VolumeId
+
+Using the output of the previous command, attach the EBS volume:
+
+aws ec2 attach-volume --volume-id VOLUME_ID --instance-id EC2_INSTANCE_ID --device /dev/sdh
+
+Click the checkbox next to the EC2 instance, then click Connect
+Select the Session Manager tab, then Connect
+In the terminal:
+mkfs.xfs /dev/nvme1n1
+mkdir /mount
+mount /dev/nvme1n1 /mount
