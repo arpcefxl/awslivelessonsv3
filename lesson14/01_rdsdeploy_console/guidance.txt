@@ -1,0 +1,23 @@
+Navigate to the RDS service dashboard and click "Create database"
+Choose "Standard Create" to see all of the options
+Engine: MySQL
+Show the versions available
+Explain differences between the Templates
+Explain each of the following:
+Availability and durability
+Settings
+DB instance class
+Storage
+Connectivity
+Database authentication
+Additional configuration
+ Database options
+ Backup
+ Encryption
+ Performance Insights
+ Monitoring
+ Log exports
+ Maintenance
+ Deletion protection
+
+Explain how the choices made will affect the provisioning time

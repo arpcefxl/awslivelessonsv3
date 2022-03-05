@@ -1,0 +1,10 @@
+Navigate to the DynamoDB service dashboard and click "Create table"
+Table name: shopping-cart
+Partition key: username / String
+Select the radio button for "Customize settings"
+Discuss the remaining options:
+Table class
+Read/write capacity settings
+Secondary indexes
+Encryption at rest
+

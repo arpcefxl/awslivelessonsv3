@@ -1,0 +1,20 @@
+Operation to enable Enhanced monitoring
+First, we need to create an IAM role to allow the metrics to be
+delivered to CloudWatch:
+Navigate to the IAM dashboard and select Roles on the left hand nav
+Click "Create role"
+Select the "AWS service" tab, then choose RDS
+Select "RDS - Enhanced Monitoring"
+Click "Next: Permissions"
+Check the Permissions policy to ensure AmazonRDSEnhancedMonitoringRole is there
+Click "Next: Tags"
+Click "Next: Review"
+Role Name: "rds-monitoring-role"
+Click "Create role"
+view and discuss the rds_enable_enhanced_monitoring.sh script
+
+Operation to initiate a manual snapshot
+view and discuss the rds_create_db_snapshot.sh script
+
+Operation to audit a parameter group for custom changes
+view and discuss the rds_paramgroup_custom_changes.sh script

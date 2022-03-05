@@ -1,0 +1,8 @@
+Navigate to the DynamoDB service dashboard and click Tables on the left hand nav
+Click on the name link for the "shopping-cart" table
+Select the "Global tables" tab
+Click "Create replica"
+Choose a second region to duplicate the table into
+Note that the first region replica will enable Streams for the table
+Click "Create replica"
+

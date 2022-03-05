@@ -1,0 +1,9 @@
+Navigate to the RDS service dashboard and click "Create database"
+Choose "Standard Create" to see all of the options
+Make sure "Amazon Aurora" radio button is selected
+Edition: MySQL
+Capacity type: Serverless
+Explain how the choices of capacity type affect functionality
+Go through the rest of the parameters explaining their function
+Explain what an ACU is and how to configure scaling
+
