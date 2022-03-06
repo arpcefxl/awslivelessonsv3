@@ -1,0 +1,10 @@
+#For all commands in this document, you'll need to edit the corresponding json to fit your specific environment.
+
+#To create the load balancer initially, use a command similar to the following:
+aws elbv2 create-load-balancer --cli-input-json file://create_elbv2.json --region us-east-1
+
+#To create the HTTPS listener, edit the json and execute the following:
+aws elbv2 create-listener --cli-input-json file://create_https_listener.json --region us-east-1
+
+#To create the HTTP listener and the redirect, execute the following:
+aws elbv2 create-listener --cli-input-json file://create_http_listener.json --region us-east-1

@@ -1,0 +1,36 @@
+Navigate to the EC2 service dashboard and select "Auto Scaling Groups" on the left hand nav
+
+Click "Create Auto scaling group"
+
+Choose launch template or configuration:
+Name the ASG
+You can provide an pre-existing Launch Template or create one now
+(Create a Launch Template)
+Click Next
+
+Instance Launch Options:
+Network (use default VPC)
+Instance type requirements (explain options)
+Instance purchase options (explain)
+Allocation strategies (explain)
+Click Next
+
+Advanced Options:
+Load balancing
+Health checks
+Additional settings
+Click Next
+
+Group size and scaling policies:
+Group size
+Scaling policies
+Scale-in protection
+Click Next
+
+Notifications:
+Click Next
+
+Add tags:
+Click Next
+
+Click "Create Auto Scaling group"

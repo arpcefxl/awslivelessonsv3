@@ -1,0 +1,18 @@
+[
+  {
+    "ParameterKey": "LAUNCHTEMPLATE",
+    "ParameterValue": "NEWLY_CREATED_LT_ID"
+  }, 
+  {
+    "ParameterKey": "LAUNCHTEMPLATEVERS",
+    "ParameterValue": "1"
+  }, 
+  {
+    "ParameterKey": "TARGETVALUE",
+    "ParameterValue": "50"
+  },
+  {
+    "ParameterKey": "SUBNETLIST",
+    "ParameterValue": "SUBNET1, SUBNET2, SUBNET3"
+  }
+]

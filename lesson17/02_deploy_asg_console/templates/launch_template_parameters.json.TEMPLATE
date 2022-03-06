@@ -1,0 +1,18 @@
+[
+  {
+    "ParameterKey": "AMIID",
+    "ParameterValue": "PASTE_YOUR_AMI_HERE"
+  }, 
+  {
+    "ParameterKey": "INSTANCETYPE",
+    "ParameterValue": "PASTE_INSTANCE_TYPE_HERE"
+  },
+  {
+    "ParameterKey": "KEYNAME",
+    "ParameterValue": "PASTE_YOUR_KEYNAME_HERE"
+  }, 
+  {
+    "ParameterKey": "SGID",
+    "ParameterValue": "PASTE_SECURITY_GROUP_ID_HERE"
+  }
+]

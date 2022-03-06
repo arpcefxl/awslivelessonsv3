@@ -1,0 +1,15 @@
+Navigate to the EC2 service dashboard and select "Load Balancers" on the left hand nav
+Click "Create load balancer"
+Locate the Application Load Balancer and click "Create" underneath it
+
+Load balancer name:
+Note this cannot be more than 32 characters (legacy reasons?)
+Network mapping: (accept default and check all the AZ boxes)
+Security groups: (accept default)
+
+Listeners and routing:
+Note that it is impossible to create an ALB via the console without:
+At least one listener
+At least one Target group (either pre-existing or created during provisioning)
+
+Scroll down and click "Create load balancer"
