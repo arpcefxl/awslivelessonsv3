@@ -1,0 +1,17 @@
+Navigate to the Kinesis service dashboard and select "Delivery Streams" on the left hand nav
+
+Click "Create Delivery Stream"
+Source: Direct PUT
+Destination: Amazon S3
+Delivery stream name: test-stream
+Data transformation: disabled
+Record format conversion: disabled
+
+Destination Settings:
+S3 bucket: click Create and create a bucket in the same region
+Click Browse after creating the bucket, then the refresh button and select the bucket
+S3 bucket prefix: leave empty
+S3 bucket error output prefix : leave empty
+Buffer hints, compression and encryption: accept defaults
+Advanced settings: accept defaults
+

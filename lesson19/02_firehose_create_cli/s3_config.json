@@ -1,0 +1,15 @@
+{
+  "RoleARN": "NEWROLE",
+  "BucketARN": "NEWBUCKET",
+  "BufferingHints": {
+    "SizeInMBs": 5,
+    "IntervalInSeconds": 300
+  },
+  "CompressionFormat": "UNCOMPRESSED",
+  "EncryptionConfiguration": {
+    "NoEncryptionConfig": "NoEncryption"
+  },
+  "CloudWatchLoggingOptions": {
+    "Enabled": false
+  }
+}

@@ -1,0 +1,5 @@
+To create a delivery pipeline in the CLI from Kinesis to S3, we start at the end and work backward
+
+Create an S3 bucket using the script
+Create an IAM role to allow delivery from Kinesis to S3
+Create the delivery stream
