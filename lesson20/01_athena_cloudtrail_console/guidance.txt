@@ -1,0 +1,32 @@
+Create an S3 bucket for Athena query results:
+aws s3api --bucket YOURNAME-account-athena-queries --region SAME_REGION_AS_CLOUDTRAIL
+Navigate to the CloudTrail service dashboard and select "Event History" on the left hand nav
+Click "Create Athena table"
+In the Storage location dropdown, select the S3 bucket that contains the CloudTrail logs
+Click "Create table"
+Navigate to the Athena service dashboard
+Note the warning: "Before you run your first query, you need to set up a query result location in Amazon S3."
+Click "View settings" in the S3 bucket warning
+Click manage
+Location of query result: s3://BUCKET_CREATED_ABOVE
+Encrypt query results: Enable
+Encryption type: SS3_S3
+Click Save
+
+Click "Explore the query editor"
+
+Example query to query all AWS logins starting 2022-01-01:
+
+SELECT useridentity.username, sourceipaddress, eventtime, additionaleventdata
+FROM YOUR_TABLE_NAME 
+WHERE eventname = 'ConsoleLogin'
+and eventtime >= '2022-01-01T00:00:00Z';
+
+Example query for all failed permissions starting 2021-01-01:
+
+SELECT count (*) as TotalEvents, useridentity.arn, eventsource, eventname, errorCode, errorMessage
+FROM YOUR_TABLE_NAME
+WHERE (errorcode like '%Denied%' or errorcode like '%Unauthorized%')
+AND eventtime >= '2021-01-01T00:00:00Z'
+GROUP by eventsource, eventname, errorCode, errorMessage, useridentity.arn
+ORDER by eventsource, eventname

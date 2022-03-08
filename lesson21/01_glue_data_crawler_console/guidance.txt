@@ -1,0 +1,39 @@
+Navigate to the Glue service dashboard and select "Crawlers" on the left hand nav
+
+Click "Add crawler"
+Crawler name: test-crawler
+Click Next
+
+Crawler source data type: Data stores
+Repeat crawls of S3 data stores: Crawl all folders
+Click Next
+
+Choose a data store: S3
+Connection: (leave blank)
+Crawl data in: Specify path in another account
+Include path: s3://crawler-public-us-east-1/flight/2016/csv
+Click Next
+
+Add another data store: No
+Click Next
+
+Select the radio button next to "Create and IAM role"
+AWSGlueServiceRole: crawler-test-role
+Click Next
+
+Frequency: Run on demand
+Click Next
+
+Click "Add database"
+Database name: crawler-test-flights
+Click Create
+
+Prefix added to tables: flights
+Click Next
+
+Click Finish
+Click "Run it now?"
+
+Click "Databases" on the left hand nav
+Click the checkbox next to "crawler-test-flights" and click "View tables"
+
