@@ -1,0 +1,21 @@
+Navigate to the OpenSearch service dashboard and click "Create domain"
+
+Domain-name: test domain
+Custom endpoint: leave unchecked (but explain)
+Deployment type: Development and testing (1 AZ)
+Version: latest
+Enable compatibility mode: unchecked
+Autotune: Enable
+Data nodes: leave all defaults
+Dedicated master nodes: unchecked
+Network:
+VPC access
+VPC: default
+Subnet: pick first item in list
+Security Group: default
+Enable fine-grained access control: Disable
+Amazon Cognito Authentication: unchecked
+Access policy: Do not set domain level access policy
+Encryption: leave all defaults
+Click Create
+
