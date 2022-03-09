@@ -1,0 +1,7 @@
+Navigate to the Organizations service dashboard
+
+Select "AWS Accounts" on the left-hand nav
+
+Explain the directory structure for OUs
+Explain which Organizations features support the OU structure
+Move accounts into OUs

@@ -1,0 +1,16 @@
+#Create the account
+
+aws organizations create-account --email <valid-email-address> --account-name <unique-descriptive-name>
+
+Account creation is pretty quick, but you can check on the provisioning this way
+
+aws organizations describe-create-account-status --create-account-request-id <request-id output from previous command>
+
+Once account is created you can verify metadata as follows
+aws organizations describe-account --account-id <account-id output from create-account command>
+
+When logged into the AWS console on the master account in the Organization you can access the newly created account by assuming a role as follows:
+1. Click on the 12-digit account ID at the top right of the browser, and select Switch Role
+2. Use the 12-digit account ID from the create account command
+3. Use the following name for the IAM Role: OrganizationAccountAccessRole
+
