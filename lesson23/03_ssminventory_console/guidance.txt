@@ -1,0 +1,7 @@
+Navigate to the SSM dashboard and select "Fleet manager" on the left hand nav
+
+In the "Managed nodes" tab there will be a list of all instances which
+have the SM agent installed and have permissions to use the service API
+Click on one of the node names
+Explore the file system
+Show that "Processes" requires KMS to function

@@ -1,0 +1,24 @@
+Deploy the two EC2 instances using Terraform if no other instances are present
+This will use us-east-1
+
+Navigate to the SSM dashboard and select "Run command" on the left hand nav
+Click "Run command"
+
+Command document: skip to page 3 and select AWS-RunShellScript
+Command parameters:
+Commands:
+uptime
+uname -a
+
+Targets:
+Specify instance tags
+Tag key: Name <----note the capital N
+Tag value: (blank)
+Click Add
+
+Output options:
+Enable an S3 bucket: unchecked
+Enable CloudWatch logs: unchecked
+
+Click Run
+View the command output

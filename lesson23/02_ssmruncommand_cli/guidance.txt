@@ -1,0 +1,2 @@
+This demo uses the same EC2 instances as the previous demo
+Execute the scripts for yum upgrade and architecture-appropriate CLI install
