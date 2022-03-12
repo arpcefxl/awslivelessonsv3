@@ -1,0 +1,7 @@
+Navigate to the Cloudwatch dashboard and select "Logs insights" on the left hand nav
+
+Select the log group containing the CloudTrail logs
+Change the query scope to 1 week
+paste in the following query:
+stats count(*) by eventSource, eventName, awsRegion
+

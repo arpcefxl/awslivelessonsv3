@@ -1,0 +1,3 @@
+Navigate to the Cloudwatch dashboard and select "Metrics->All Metrics" on the left hand nav
+
+View metrics and view the cross-service dashboard
