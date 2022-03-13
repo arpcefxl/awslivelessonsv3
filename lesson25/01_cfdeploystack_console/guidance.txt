@@ -1,0 +1,10 @@
+Navigate to the CloudFormation dashboard and click "Create stack"
+
+Template source: Upload a template file
+Select the yaml file for the sample VPC
+Click Next
+Stack name: demo-cloudformation-vpc
+Click Next
+Click Next
+Click "Create stack"
+View the events, resources and switch to the VPC dashboard to verify

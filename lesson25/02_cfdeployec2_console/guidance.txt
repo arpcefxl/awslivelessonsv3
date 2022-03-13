@@ -1,0 +1,7 @@
+Navigate to the CloudFormation dashboard and click "Create stack"
+
+Template source: Upload a template file
+Select the json file for the sample VPC (cloudformation-ec2.json)
+Stack name: demo-cloudformation-ec2
+Fill in all the appropriate parameters
+View the events, resources and switch to the EC2 dashboard to verify
