@@ -1,0 +1,1 @@
+Create an AWS Health rule which notifies for all EC2 Health events

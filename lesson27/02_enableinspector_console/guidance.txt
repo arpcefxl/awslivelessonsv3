@@ -1,0 +1,2 @@
+Navigate to the Inspector dashboard and click "Get Started"
+Explain how Inspector can test both EC2 and ECR and show dashboard

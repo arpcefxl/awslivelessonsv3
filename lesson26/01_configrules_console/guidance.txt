@@ -1,0 +1,4 @@
+Assumes that there is an existing AWS Config stream already configured
+
+Create rule for access-keys-rotated as an example of a scheduled automated task
+

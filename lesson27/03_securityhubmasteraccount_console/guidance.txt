@@ -1,0 +1,5 @@
+Navigate to the Security Hub dashboard and click on Settings on the left hand nav
+Select the General tab
+Delegated administrator account ID:
+(enter the 12-digit account ID for the Organizations account you want to delegate)
+Click "Delegate"
