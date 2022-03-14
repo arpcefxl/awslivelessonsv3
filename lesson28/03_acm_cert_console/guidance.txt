@@ -1,0 +1,14 @@
+Switch to an AWS account with a public Route 53 domain already provisioned
+Navigate to the ACM dashboard and click "Request a certificate"
+
+Certificate type: Request a public certificate
+Click Next
+Fully qualified domain name: awslivelessons.YOURDOMAIN
+Select validation method: DNS validation
+Click Request
+
+View the certificate request
+Scroll down to Domains and click "Create records in Route 53"
+Click "Create records"
+View the certificate list, and within a few minutes, the certificate will be issued
+

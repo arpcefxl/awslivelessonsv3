@@ -1,0 +1,8 @@
+Execute the shell script (edit first if you like)
+Navigate to the Secrets Manager dashboard in the correct region
+View the secret that has been created
+If you are ready to remove the secret, click on the named link for the secret
+Select the Actions dropdown, then "Delete secret"
+Note that you cannot delete a secret immediately
+Set the delete time to the minimum 7 days
+Click "Schedule deletion"

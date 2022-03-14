@@ -1,0 +1,8 @@
+Navigate to the CodeCommit dashboard and click "Create repository"
+
+Repository name: testrepo
+Click Create
+
+View the HTTPS and SSH tabs to see what credentials are required
+Also view the connection methods
+You can connect to the repo using the AWS CLI credential helper

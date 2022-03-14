@@ -1,0 +1,21 @@
+Navigate to the KMS dashboard and click "Create a key"
+Key type: symmetric
+Click the Advanced options link and view the other choices
+Click Next
+Alias: mys3key
+Description: test key created for s3 encryption
+Click Next
+Key administrators: choose the identity you're logged in as
+Key deletion: checked
+Key users: choose the identity you're logged in as
+Click Next
+View the Key Policy and click Finish
+Navigate to the S3 dashboard and click on a bucket's name link
+Click on Properties
+Scroll down to "Default encryption"
+Click Edit
+Click the Enable radio button
+Click the "AWS Key Management Service key (SSE-KMS)" radio button
+Click the "Choose from your AWS KMS keys" radio button
+In the "AWS KMS key" drop-down, select your newly created key
+Click "Save changes"
