@@ -1,0 +1,3 @@
+Navigate to the Billing console and select Cost Explorer from the left hand nav
+View the base report, then filter and sort by various properties
+View other options such as Anomaly Detection

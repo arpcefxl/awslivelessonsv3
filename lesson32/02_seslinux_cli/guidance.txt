@@ -1,0 +1,4 @@
+(optional) Configure SES for the region and domain
+(optional) Verify domain ownership and DKIM records via Route 53
+Create SMTP credentials via IAM and download the creds
+Launch EC2 instance

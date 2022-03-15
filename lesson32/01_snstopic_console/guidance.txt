@@ -1,0 +1,10 @@
+Navigate to the SNS dashboard and click "Create Topic"
+Click the "Standard" radio button
+Name: test-topic
+Click "Create topic"
+Select the Subscriptions tab
+Click "Create subscription"
+Protocol: Email
+Endpoint: <your email>
+Click "Create subscription"
+
